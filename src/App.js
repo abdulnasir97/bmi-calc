@@ -13,13 +13,13 @@ function App() {
     event.preventDefault();
 
     if (weight === 0 || height === 0) {
-      alert("Please enter a valid weight and height");
+      alert("Please enter the weight and height");
     } else {
       let bmi = (weight / (height * height)) * 703;
       setBmi(bmi.toFixed(1));
 
       if (bmi < 24.9) {
-        setPrompt("You are underweight! Add some calories to your diet.");
+        setPrompt("You are underweight. Add some calories to your diet.");
       } else if (bmi >= 25 && bmi < 29.9) {
         setPrompt("You are at a healthy weight, great job!");
       } else {
